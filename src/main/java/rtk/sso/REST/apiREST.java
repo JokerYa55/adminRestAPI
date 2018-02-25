@@ -1,4 +1,5 @@
 /*
+
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -99,6 +100,7 @@ public class apiREST {
     }
 
     public String addUser(Object user) {
+        log.info("\naddUser");
         String res = null;
         try {
             utlhttp httpUtil = new utlhttp();
@@ -110,7 +112,7 @@ public class apiREST {
             } else {
                 url = host + "/admin/realms/" + this.realm + "/users";
             }
-
+            log.info(String.format("url => ", url));
             Map<String, String> mapHeader = new HashMap<>();
             mapHeader.put("Content-Type", "application/json");
             mapHeader.put("Authorization", "Bearer " + this.token);
@@ -124,7 +126,6 @@ public class apiREST {
             JSONObject userDB = null;
             if (userJSON.size() == 1) {
                 log.info(String.format("userDB = > ", userDB.toJSONString()));
-
                 userDB = (JSONObject) userJSON.get(0);
                 res = "1";
             } else {

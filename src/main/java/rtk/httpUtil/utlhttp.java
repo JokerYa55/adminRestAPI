@@ -53,7 +53,7 @@ public class utlhttp {
      * @return
      */
     public JSONObject doPost(String url, Object params, Map<String, String> headerList) {
-        log.info(String.format("doPost => url =%s param = %s", url, params.toString()));
+        log.info(String.format("doPost => url =%s \nparam = %s", url, params.toString()));
         JSONObject res = new JSONObject();
         try (CloseableHttpClient httpClient = HttpClientBuilder.create().setDefaultRequestConfig(config).build()) {
             Gson gson = new Gson();
