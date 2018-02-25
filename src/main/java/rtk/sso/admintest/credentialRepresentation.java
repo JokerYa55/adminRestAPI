@@ -26,18 +26,34 @@ public class credentialRepresentation {
     private String value;
     private Boolean temporary;
 
+    /**
+     *
+     * @return
+     */
     public String getType() {
         return type;
     }
 
+    /**
+     *
+     * @param type
+     */
     public void setType(String type) {
         this.type = type;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getValue() {
         return value;
     }
 
+    /**
+     *
+     * @param value
+     */
     public void setValue(String value) {
         this.value = value;
     }
@@ -47,10 +63,18 @@ public class credentialRepresentation {
         return "credentialRepresentation{" + "type=" + type + ", value=" + value + '}';
     }
 
+    /**
+     *
+     * @return
+     */
     public Boolean getTemporary() {
         return temporary;
     }
 
+    /**
+     *
+     * @param temporary
+     */
     public void setTemporary(Boolean temporary) {
         this.temporary = temporary;
     }

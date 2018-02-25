@@ -41,6 +41,15 @@ public class apiREST {
     private String client_secret = null;
     private String token_json;
 
+    /**
+     *
+     * @param username
+     * @param password
+     * @param client_id
+     * @param client_secret
+     * @param host
+     * @param realm
+     */
     public apiREST(String username, String password, String client_id, String client_secret, String host, String realm) {
         this.username = username;
         this.password = password;
@@ -51,17 +60,30 @@ public class apiREST {
         Init();
     }
 
+    /**
+     *
+     * @param token
+     * @param host
+     * @param realm
+     */
     public apiREST(String token, String host, String realm) {
         this.token = token;
         this.host = host;
         this.realm = realm;
     }
 
+    /**
+     *
+     * @param token
+     */
     public apiREST(String token) {
         getProperties("videomanager.json");
         this.token = token;
     }
 
+    /**
+     *
+     */
     public void Init() {
         try {
             JSONObject objToken = genToken();
@@ -99,6 +121,11 @@ public class apiREST {
         return res;
     }
 
+    /**
+     *
+     * @param user
+     * @return
+     */
     public String addUser(Object user) {
         log.info("\naddUser");
         String res = null;
@@ -143,6 +170,12 @@ public class apiREST {
         return res;
     }
 
+    /**
+     *
+     * @param userID
+     * @param password
+     * @return
+     */
     public int changeUserPassword(String userID, String password) {
         try {
             log.info(String.format("changeUserPassword => {0}", password));
@@ -225,6 +258,12 @@ public class apiREST {
         return res;
     }
 
+    /**
+     *
+     * @param userID
+     * @param user
+     * @return
+     */
     public int updateUser(String userID, Object user) {
         log.info("updateUser");
         String res = null;
@@ -292,10 +331,18 @@ public class apiREST {
         return res;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getToken() {
         return token;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getToken_json() {
         return token_json;
     }

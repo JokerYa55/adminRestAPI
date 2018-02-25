@@ -149,9 +149,11 @@ public class utlhttp {
     /**
      *
      * @param url
+     * @param params
      * @param headerList
      * @return
      * @throws ParseException
+     * @throws java.io.UnsupportedEncodingException
      */
     public String doGet(String url, List params, Map<String, String> headerList) throws ParseException, UnsupportedEncodingException {
         log.info("doGet");

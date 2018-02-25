@@ -19,29 +19,56 @@ public class federatedIdentity {
     private String userId;
     private String userName;
 
+    /**
+     *
+     */
     public federatedIdentity() {
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIdentityProvider() {
         return identityProvider;
     }
 
+    /**
+     *
+     * @param identityProvider
+     */
     public void setIdentityProvider(String identityProvider) {
         this.identityProvider = identityProvider;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUserId() {
         return userId;
     }
 
+    /**
+     *
+     * @param userId
+     */
     public void setUserId(String userId) {
         this.userId = userId;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUserName() {
         return userName;
     }
 
+    /**
+     *
+     * @param userName
+     */
     public void setUserName(String userName) {
         this.userName = userName;
     }

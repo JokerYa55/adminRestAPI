@@ -26,50 +26,98 @@ public class keycloakUser {
     private HashMap<String, String> attributes;
     private List<credentialRepresentation> credentials;
 
+    /**
+     *
+     * @return
+     */
     public String getUsername() {
         return username;
     }
 
+    /**
+     *
+     * @param username
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     *
+     * @return
+     */
     public boolean isEnabled() {
         return enabled;
     }
 
+    /**
+     *
+     * @param enabled
+     */
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     *
+     * @param email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getFirstName() {
         return firstName;
     }
 
+    /**
+     *
+     * @param firstName
+     */
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getLastName() {
         return lastName;
     }
 
+    /**
+     *
+     * @param lastName
+     */
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
 
+    /**
+     *
+     * @return
+     */
     public List<credentialRepresentation> getCredentials() {
         return credentials;
     }
 
+    /**
+     *
+     * @param credentials
+     */
     public void setCredentials(List<credentialRepresentation> credentials) {
         this.credentials = credentials;
     }
@@ -79,10 +127,18 @@ public class keycloakUser {
         return "keycloakUser{" + "username=" + username + ", enabled=" + enabled + ", email=" + email + ", firstName=" + firstName + ", lastName=" + lastName + ", attributes=" + attributes + ", credentials=" + credentials + '}';
     }
 
+    /**
+     *
+     * @return
+     */
     public HashMap<String, String> getAttributes() {
         return attributes;
     }
 
+    /**
+     *
+     * @param attributes
+     */
     public void setAttributes(HashMap<String, String> attributes) {
         this.attributes = attributes;
     }
