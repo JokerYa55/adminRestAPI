@@ -221,7 +221,7 @@ public class apiREST {
         } catch (Exception e) {
             log.log(Level.ERROR, e);
         }
-        //System.out.println("getUsers res= " + res.toJSONString());
+        System.out.println("getUsers res= " + res.toJSONString());
         return res;
     }
 
